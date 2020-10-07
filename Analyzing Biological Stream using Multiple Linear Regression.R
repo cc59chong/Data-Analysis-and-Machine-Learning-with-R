@@ -99,10 +99,10 @@ com_mod <- compareLM(model_1, model_2, model_3, model_4, model_5, model_6, model
 com_mod
 
 com_model <- com_mod$Fit.criteria
-com_model[order(com_model$AICc),]
+com_model[order(com_model$AIC),]
 
 
-plot(com_model$AICc, type = "b", xlab = "model number", ylab = "AICc value")
+plot(com_model$AIC, type = "b", xlab = "model number", ylab = "AIC value")
 
 
 
@@ -127,6 +127,28 @@ actuals_preds7 <-data.frame(cbind(actuals=testData$Longnose, predicteds=long_Pre
 
 correlation_accuracy7 <- cor(actuals_preds7)
 correlation_accuracy7
+
+set.seed(100)
+stream_8<- stream1[c("Longnose","Acerage","Maxdepth", "NO3", "DO2")]
+
+trainingRowIndex <- sample(1:nrow(stream_8), 0.8*nrow(stream_8)) 
+# row indices for training data
+
+trainingData <- stream_8[trainingRowIndex, ]  # model training data
+
+testData <- stream_8[-trainingRowIndex, ]   # test data
+
+# Build the model on training data -
+
+str_model8 <- lm(Longnose ~ Acerage + Maxdepth + NO3 + DO2, data=trainingData)  # build the model
+
+long_Pred8 <- predict(str_model8, testData)  # predict distance
+
+actuals_preds8 <-data.frame(cbind(actuals=testData$Longnose, predicteds=long_Pred8))
+
+correlation_accuracy8 <- cor(actuals_preds8)
+correlation_accuracy8
+
 
 
 
