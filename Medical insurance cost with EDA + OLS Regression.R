@@ -71,6 +71,10 @@ mul_model <- lm(charges ~ age + sex + bmi + children + smoker + region, data = i
 # mul_model_ <- lm(charges ~ ., data = insurance_new)
 summary(mul_model)
 
+library(relaimpo)
+relative_importance <- calc.relimp(mul_model, type = "lmg", rela = TRUE)
+sort(relative_importance$lmg, decreasing = TRUE)
+
 #backward stepwise
 mul_model1 <- lm(charges ~ age + sex + bmi + children + smoker + region, data = insurance_new)
 mul_model2 <- lm(charges ~ age + sex + bmi + children + smoker,          data = insurance_new)
@@ -86,6 +90,16 @@ com_model <- com_mod$Fit.criteria
 com_model[order(com_model$AIC),]
 plot(com_model$AIC, type = "b", xlab = "model number", ylab = "AICc value")
 
+
+base_mod <- lm(charges ~ 1 , data= insurance_new)  # base intercept only model
+
+all_mod <- lm(charges ~ . , data= insurance_new) # full model with all predictors
+
+stepMod <- step(base_mod, scope = list(lower = base_mod, upper = all_mod), direction = "both", trace = 0, steps = 1000)  # perform step-wise algorithm
+
+stepMod
+
+
 library(MASS)
 mul_model <- lm(charges ~ age + sex + bmi + children + smoker + region, data = insurance_new)
 stepAIC(mul_model, direction = "backward")
@@ -93,6 +107,18 @@ stepAIC(mul_model, direction = "backward")
 library(car)
 vif(mul_model)
 sqrt(vif(mul_model)) > 2
+
+library(leaps)
+subsets <- regsubsets(charges ~., data = insurance_new, nbest = 2)
+subsets
+
+plot(subsets, scale = "r2") # regsubsets plot based on R-sq
+abline(h=4, v=0, col="red")
+abline(h=10, v=0, col="green")
+
+
+mod_re <- residuals(mul_model)
+hist(mod_re)
 
 par(mfrow=c(2,2))
 plot(mul_model)
