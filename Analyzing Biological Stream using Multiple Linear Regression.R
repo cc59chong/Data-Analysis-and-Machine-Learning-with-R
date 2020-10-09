@@ -51,28 +51,57 @@ str(stream1)
 
 
 #b******************************
+#Check the normality of the dependent variable. Log transform the dependent variable if necessary.¶
 summary(stream1$Longnose)
-hist(stream1$Longnose)
+par(mfrow = c(1,2))
+hist(stream1$Longnose, main = "Histogram of Longnose")
+plot(density(stream1$Longnose), main = "Density of Longnose")
+
+#Then log and check the dependent variable Longnose.
 stream1$Longnose <- log(stream1$Longnose)
-hist(stream1$Longnose)
 summary(stream1$Longnose)
+par(mfrow = c(1,2))
+hist(stream1$Longnose, main = "Histogram of Longnose(log)")
+plot(density(stream1$Longnose), main = "Density of Longnose(log)")
 
 #c******************************
+#Check the correlation coefficient
+
+#1.Using cor() to see table
 cor(stream1[c("Longnose", "Acerage", "DO2", "Maxdepth", "NO3", "SO4", "Temp")])
-install.packages("car")
-library(car)
-vif(model_stream)
+
 
 #d******************************
+#Using paris.pannels
 library(psych)
-pairs.panels(stream1[c("Longnose", "Acerage", "DO2", "Maxdepth", "NO3", "SO4", "Temp")])
+library(psych)
+pairs.panels(stream1[c("Longnose", "Acerage", "DO2", "Maxdepth", "NO3", "SO4", "Temp")],
+             pch =1,
+             lm = TRUE, 
+             cex.cor = 1,
+             smoother = F,
+             stars = T)
+
+#Using chart.Correlation
+library(PerformanceAnalytics)
+chart.Correlation(stream1[c("Longnose", "Acerage", "DO2", "Maxdepth", "NO3", "SO4", "Temp")],
+                  method="pearson",
+                  histogram=TRUE,
+                  pch=1,
+                  main = "Scatterplot Matrix")
+
+#Using ggpairs
+library(ggplot2)
+library(GGally)
+ggpairs(stream1[c("Longnose", "Acerage", "DO2", "Maxdepth", "NO3", "SO4", "Temp")])
+
 
 #e******************************
 model_stream <- lm(Longnose ~ Acerage + DO2 + Maxdepth + NO3 + SO4 + Temp, data = stream1) 
 model_stream
 
 #f******************************
-#I
+#Check the model assumptions
 hist(residuals(model_stream))
 mod_re <- residuals(model_stream)
 hist(mod_re)
