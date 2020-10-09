@@ -6,7 +6,6 @@
 > Logistic Regression, Decision Trees, Conditional Inference Trees, Random Forest, Support vector machines, Choosing a best predictive solution
 
 ### Medical insurance cost with EDA + OLS Regression [Details](https://www.kaggle.com/chongchong33/medical-insurance-cost-with-eda-ols-regression?scriptVersionId=44325035)  
-> * Ordinary Least Squares (OLS) Regression: simple linear regression, polynomial regression, and multiple linear regression<br>
-> * Exploring and Preparing the Data, Model Building, Fitting Model using Stepwise Regression, Regression Assumptions, Improving model performance<br>
+> * Ordinary Least Squares (OLS) Regression: Simple Linear Regression, Polynomial Regression, and Multiple Linear Regression<br>
+> * Exploring and Preparing the Data, Model Building, Variable Importance, Regression Assumptions, Improving Model performance<br>
 > * Log Transformation, Outliers Remove Function, Multicollinearity Check, Statistical Interpretation 
-
