@@ -3,7 +3,7 @@
 > * Logarithmic Transformation, Variable Importance, Regression Assumptions(Residuals, Cook's D)
 
 ### Breast Cancer Wisconsin - Classification
-> Logistic Regression, Decision Trees, Conditional Inference Trees, Random Forest, Support vector machines, Choosing a best predictive solution
+> * Logistic Regression, Decision Trees, Conditional Inference Trees, Random Forest, Support vector machines, Choosing a best predictive solution
 
 ### Medical insurance cost with EDA + OLS Regression [Details](https://www.kaggle.com/chongchong33/medical-insurance-cost-with-eda-ols-regression?scriptVersionId=44325035)  
 > * Ordinary Least Squares (OLS) Regression: Simple Linear Regression, Polynomial Regression, and Multiple Linear Regression<br>
