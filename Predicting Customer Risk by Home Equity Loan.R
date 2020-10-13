@@ -194,5 +194,7 @@ plotROC(testData$BAD, pred_logit)
 
 Concordance(testData$BAD, pred_logit)
 
-
+#Let's look at the feature importance
+library('caret')
+varImp(logitMod)
 
