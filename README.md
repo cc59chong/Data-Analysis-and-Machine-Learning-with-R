@@ -13,7 +13,7 @@
 ### Predicting Customer Risk by Home Equity Loan [Details](https://www.kaggle.com/chongchong33/predicting-customer-risk-by-home-equity-loan)
 > * Data Pre-processing
 > * Imbalance Data (Decision Tree)
->> Undersampling, Oversampling, Both, SMOTE
+>> Undersampling, Oversampling, Both, SMOTE<br>
 >> Performance Metrics: Accuracy, Error Rate, Specificity, Precision, Recall(Sensitivity), F Measure, ROC, AUC
 > * Build Model (Logistic Regression)
 > * Model Diagnostics
