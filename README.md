@@ -9,3 +9,12 @@
 > * Ordinary Least Squares (OLS) Regression: Simple Linear Regression, Polynomial Regression, and Multiple Linear Regression<br>
 > * Exploring and Preparing the Data, Model Building, Variable Importance, Regression Assumptions, Improving Model performance<br>
 > * Log Transformation, Outliers Remove Function, Multicollinearity Check, Statistical Interpretation 
+
+### Predicting Customer Risk by Home Equity Loan [Details](https://www.kaggle.com/chongchong33/predicting-customer-risk-by-home-equity-loan)
+> * Data Pre-processing
+> * Imbalance Data (Decision Tree)
+>> Undersampling, Oversampling, Both, SMOTE
+>> Performance Metrics: Accuracy, Error Rate, Specificity, Precision, Recall(Sensitivity), F Measure, ROC, AUC
+> * Build Model (Logistic Regression)
+> * Model Diagnostics
+>>VIF, Cutoff, Misclassification Error, Confusion Matrix, Concordance
