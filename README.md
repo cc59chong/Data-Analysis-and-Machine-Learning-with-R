@@ -18,3 +18,22 @@
 > * Build Model (Logistic Regression)
 > * Model Diagnostics
 >>VIF, Cutoff, Misclassification Error, Confusion Matrix, Concordance
+
+### Predicting Hospital Readmission of Diabetic Patients [Details](https://www.kaggle.com/chongchong33/predicting-hospital-readmission-of-diabetics)
+#### Contents
+> * Dataset Description
+> * Dataset Preparation
+>> Transform data type
+>> Deal with the missing value
+>> Recoding and collapsing features
+>> Categorization
+>> Remove the outliers
+> * Feature Selection
+>> Boruta algorithm
+> *Analytical Teachiques
+>> Split the dataset into training data and test data
+>> Data balancing
+>> k-Fold Cross-validation
+> * Models and evaluation
+> * Model Comparison
+> *Conclusions
