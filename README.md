@@ -23,17 +23,11 @@
 #### Contents
 > * Dataset Description
 > * Dataset Preparation
->> Transform data type
->> Deal with the missing value
->> Recoding and collapsing features
->> Categorization
->> Remove the outliers
+>> Transform data type, Deal with the missing value, Recoding and collapsing features, Categorization, Remove the outliers
 > * Feature Selection
 >> Boruta algorithm
 > *Analytical Teachiques
->> Split the dataset into training data and test data
->> Data balancing
->> k-Fold Cross-validation
+>> Split the dataset into training data and test data, Data balancing, k-Fold Cross-validation
 > * Models and evaluation
 > * Model Comparison
 > *Conclusions
