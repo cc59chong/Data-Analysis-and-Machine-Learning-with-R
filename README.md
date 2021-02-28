@@ -25,6 +25,13 @@
 > * Model Diagnostics
 >>VIF, Cutoff, Misclassification Error, Confusion Matrix, Concordance
 
+### Health Insurance Data -- EDA/Managing (ggplot2) [Details](https://www.kaggle.com/chongchong33/health-insurance-data-eda-managing-ggplot2)
+> * Visually checking distributions for a single variable
+> * Visually checking relationships between two variables
+> * Plotting data with a rug
+> * Cleaning data
+> * Data Transformations
+
 ### Analyzing Biological Stream using Multiple Linear Regression 
 > * Check the Corralation Cofficient (visualization) paris.panels(), chartCorrelation(), ggpairs()<br>
 > * Logarithmic Transformation, Variable Importance, Regression Assumptions(Residuals, Cook's D)
