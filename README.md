@@ -32,7 +32,7 @@
 > * Cleaning data
 > * Data Transformations
 
-### Analyzing Biological Stream using Multiple Linear Regression 
+### Analyzing Biological Streams using Multiple Linear Regression 
 > * Check the Corralation Cofficient (visualization) paris.panels(), chartCorrelation(), ggpairs()<br>
 > * Logarithmic Transformation, Variable Importance, Regression Assumptions(Residuals, Cook's D)
 
