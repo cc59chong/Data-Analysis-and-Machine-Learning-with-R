@@ -51,7 +51,7 @@ str(stream1)
 
 
 #b******************************
-#Check the normality of the dependent variable. Log transform the dependent variable if necessary.¶
+#Check the normality of the dependent variable. Log transform the dependent variable if necessary.Â¶
 summary(stream1$Longnose)
 par(mfrow = c(1,2))
 hist(stream1$Longnose, main = "Histogram of Longnose")
